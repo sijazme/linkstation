@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title> Linkstations </title>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>	
+	<script src="javascripts/src.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="stylesheets/styles.css" rel="stylesheet">
+
+  </head>
+<body>
+
+  <div class="container">
+
+  <img width="300" height="100" src='https://66m4i2zg7xf1y14ot28gqej8-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/nord-cloud-logo.svg'></img>
+  
+<br/>
+  <p> Find link station for a device at given point x,y with most power. </p>
+
+<textarea id="txtLinkstation" rows="6" cols="70" placeholder="define linkstations here">
+[[0, 0, 10],
+[20, 20, 5],
+[10, 0, 12]]
+</textarea>
+
+<br/><br/>
+
+<textarea id="txtPoints" rows="6" cols="70" placeholder="define points here">
+[[0, 0],
+[100, 100],
+[15, 10],
+[18, 18]]
+</textarea>
+				
+	<br/><br/>
+				
+	<button class="btn btn-primary my-btn" onclick='find()'> Find </button>
+
+	<br/><br/>
+
+
+<textarea class="console" id="txtBestLink" rows="6" cols="70" placeholder="best link station"></textarea>
+
+		
+</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,2 @@
+C:\Users\ijazs\source\repos\Linkstation\obj\Debug\Linkstation.njsprojAssemblyReference.cache
+C:\Users\ijazs\source\repos\Linkstation\bin\Microsoft.NodejsTools.WebRole.dll
