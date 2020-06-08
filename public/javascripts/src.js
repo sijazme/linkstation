@@ -1,5 +1,4 @@
 
-
 function distance(x1, y1, x2, y2)
 {    
     return Math.round ( Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2) * 1.0)  );
@@ -17,10 +16,10 @@ function isJson(str) {
 function find() {
 
     var box = $("textarea#txtBestLink");
-    box.val("");
-    
     var str1 = $('textarea#txtLinkstation').val().trim();
     var str2 = $('textarea#txtPoints').val().trim();
+
+    box.val("");
 
     if (isJson(str1) == false || isJson(str2) == false)
     {
@@ -47,10 +46,8 @@ function find() {
             var x2 = arr[0];
             var y2 = arr[1];
             var reach = arr[2];
-            var dist = distance(x1, y1, x2, y2);
 
-            console.log('(' + x1 + ',' + y1 + ')' + "  --> " + '(' + x2 + ',' + y2 + ')' + "  " + 'distance :' + dist);
-            console.log('reach : ' + reach);
+            var dist = distance(x1, y1, x2, y2);
 
             var pwr = -1;
 
@@ -61,12 +58,7 @@ function find() {
                 pwr = Math.pow((reach - dist), 2);
             }
 
-            console.log('pwr : ' + pwr);
-
             pwr_array.push(pwr);
-            
-            console.log('---------------------------------------------');
-            
         });
 
         var pwr_max = Math.max.apply(false, pwr_array);
@@ -80,8 +72,7 @@ function find() {
         }
         else {
             box.val(box.val() + "Best link station for point " + x1 + "," + y1 + " is " + coordinates_parsed  + " with power " + pwr_max + "\n");
-        }
-        
+        }        
     });
 
 }
